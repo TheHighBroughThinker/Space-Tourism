@@ -1,0 +1,28 @@
+<div class="page">
+  <img src="../assets/backgrounds/background-technology-desktop.jpg" alt="Background Image" class="background-image">
+  <div class="content-container">
+
+    <h2 class="technology-page-header">
+      <div class="header-number">03</div>
+      <div class="page-header-text">SPACE LAUNCH 101</div>
+    </h2>
+
+    <div class="content-group">
+
+      <div class="circle-section">
+        <div class="circle" *ngFor="let circle of technologyData; let i = index"
+        [class.active]="i + 1 === activeCircle" (click)="setActiveCircle(i + 1)">{{ i + 1 }}</div>
+      </div>
+
+      <div class="terminology-section">
+        <p class="terminology-text">THE TECHNOLOGY ...</p>
+        <h3 class="terminology-name">{{ technologyData[activeCircle - 1]?.name }}</h3>
+        <p class="terminology-description">{{ technologyData[activeCircle - 1]?.description }}</p>
+      </div>
+
+      <div class="image-section">
+        <img [src]="technologyData[activeCircle - 1]?.images.portrait" [alt]="technologyData[activeCircle - 1]?.name">
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="page">
+  <img src="../assets/backgrounds/background-destination-desktop.jpg" alt="Background Image" class="background-image">
+  <div class="content-container">
+    <h2 class="destination-page-header">
+      <div class="header-number">01</div>
+      <div class="page-header-text">PICK YOUR DESTINATION</div>
+    </h2>
+
+    <div class="destination-container">
+      <div class="destination-image">
+        <img [src]="destinationData[activeLink - 1]?.imageUrl" [alt]="destinationData[activeLink - 1]?.name">
+      </div>
+
+      <div class="destination-info">
+        <div class="destination-links">
+          <a class="destination-link" *ngFor="let destination of destinationData; let i = index"
+             [class.active]="i + 1 === activeLink"
+             href="#"
+             (click)="setActiveLink(i + 1, $event)">{{ destination.name }}</a>
+        </div>
+
+        <div class="destination-details">
+          <h3 class="destination-name">{{ destinationData[activeLink - 1]?.name }}</h3>
+          <p class="destination-description">{{ destinationData[activeLink - 1]?.description }}</p>
+
+          <div class="nav-line"></div>
+
+          <div class="additional-info">
+            <div class="info-pair">
+              <span class="destination-info-label">AVG. DISTANCE:</span>
+              <span class="destination-info-item">{{ destinationData[activeLink - 1]?.avgDistance }}</span>
+            </div>
+            <div class="info-pair">
+              <span class="destination-info-label">EST. TRAVEL TIME:</span>
+              <span class="destination-info-item">{{ destinationData[activeLink - 1]?.estTravelTime }}</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<nav class="navbar">
+  <div class="logo">
+    <img src="../assets/shared/logo.svg" alt="Logo">
+  </div>
+
+  <div class="nav-line"></div>
+
+  <!-- Hamburger menu icon -->
+  <div class="hamburger-menu" (click)="toggleMenu()">
+    <img *ngIf="isMobile" [src]="menuOpen ? '../assets/shared/icon-close.svg' : '../assets/shared/icon-hamburger.svg'" alt="Menu">
+  </div>
+
+  <div class="nav-links-container" [ngClass]="{ 'show-menu': menuOpen && isMobile }">
+    <a (click)="navigateToHome()" [class.active]="activeLink === 'home'" class="nav-link"><strong>00</strong>HOME</a>
+    <a (click)="navigateToDestination()" [class.active]="activeLink === 'destination'" class="nav-link"><strong>01</strong>DESTINATION</a>
+    <a (click)="navigateToCrew()" [class.active]="activeLink === 'crew'" class="nav-link"><strong>02</strong>CREW</a>
+    <a (click)="navigateToTechnology()" [class.active]="activeLink === 'technology'" class="nav-link"><strong>03</strong>TECHNOLOGY</a>
+  </div>
+</nav>

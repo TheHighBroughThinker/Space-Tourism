@@ -1,0 +1,282 @@
+/* Desktop */
+.content-container {
+  padding: 50px;
+  margin-top: 20vh;
+  text-align: center;
+  color: white;
+  display: block;
+  letter-spacing: 2px;
+}
+
+.technology-page-header {
+  margin-left: 100px;
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  padding-bottom: 20px;
+  font-family: var(--barlow-condensed);
+}
+
+.header-number {
+  color: var(--gray);
+  padding-right: 12px;
+}
+
+.page-header-text {
+  font-weight: 300;
+}
+
+.content-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.circle-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 50px;
+  margin-left: 100px;
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--black);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 18px;
+}
+
+.circle.active {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.terminology-section {
+  width: 40%;
+  text-align: left;
+}
+
+.terminology-text {
+  font-family: var(--barlow-condensed);
+  font-size: 16px;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+
+.terminology-name {
+  margin-top: 20px;
+  font-family: var(--bellefair);
+  font-size: 56px;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+
+.terminology-description {
+  font-family: var(--barlow-condensed);
+  font-size: 18px;
+  font-weight: 100;
+  margin-top: 10px;
+}
+
+.image-section {
+  width: 35%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: -50px;
+}
+
+.image-section img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tablet */
+@media only screen and (max-width: 1024px) {
+  .content-container {
+    padding: 50px;
+    margin-top: 10vh;
+    text-align: center;
+    color: var(--white);
+    display: block;
+    letter-spacing: 2px;
+  }
+
+  .technology-page-header {
+    margin-left: 10px;
+    font-size: 26px;
+    padding-bottom: 30px;
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
+
+  .header-number {
+    display: inline;
+    color: var(--gray);
+    padding-right: 6px;
+  }
+
+  .page-header-text {
+    display: inline;
+    font-weight: 300;
+  }
+
+  .content-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .circle-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    margin-top: 390px;
+    width: 30%;
+    margin-left: 24px;
+  }
+
+  .circle {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+
+  .terminology-section {
+    width: 70%;
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 40px;
+  }
+
+  .terminology-text {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .terminology-name {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  .terminology-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+
+  .image-section {
+    width: 100%;
+    margin: 0;
+    order: -1;
+    position: absolute;
+  }
+
+  .image-section img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+  .content-container {
+    padding: 50px;
+    margin-top: 4vh;
+    text-align: center;
+    color: var(--white);
+    display: block;
+    letter-spacing: 2px;
+    max-height: calc(100vh - 150px);
+    overflow-y: auto;
+  }
+
+  .technology-page-header {
+    margin-left: px;
+    font-size: 26px;
+    padding-bottom: 30px;
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
+
+  .header-number {
+    display: flex;
+    color: var(--gray);
+    padding-right: 6px;
+  }
+
+  .page-header-text {
+    display: flex;
+    font-weight: 300;
+  }
+
+  .content-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .circle-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    margin-top: 220px;
+    width: 80%;
+    margin-left: 40px;
+  }
+
+  .circle {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+
+  .terminology-section {
+    width: 90%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .terminology-text {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .terminology-name {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .terminology-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: justify;
+    line-height: 26px;
+  }
+
+  .image-section {
+    width: 100%;
+    margin: 0;
+    order: -1;
+    position: absolute;
+  }
+
+  .image-section img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+

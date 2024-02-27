@@ -1,0 +1,30 @@
+<div class="page">
+  <div class="content-container">
+
+    <h2 class="crew-page-header">
+      <div class="header-number">02</div>
+      <div class="page-header-text">MEET YOUR CREW</div>
+    </h2>
+
+    <div class="crew-container">
+      <div class="crew-info">
+        <div class="details">
+          <p class="crew-role">{{ crewData[activeCrewIndex]?.role }}</p>
+          <h3 class="crew-name">{{ crewData[activeCrewIndex]?.name }}</h3>
+          <p class="crew-bio">{{ crewData[activeCrewIndex]?.bio }}</p>
+          <div class="crew-links">
+            <span *ngFor="let crewMember of crewData; let i = index"
+               [class.active]="i === activeCrewIndex"
+               (click)="setActiveCrew(i)" class="dot"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="image-section">
+        <img [src]="crewData[activeCrewIndex]?.imageUrl" [alt]="crewData[activeCrewIndex]?.name">
+      </div>
+
+    </div>
+  </div>
+  <img src="../assets/backgrounds/background-crew-desktop.jpg" alt="Background Image" class="background-image">
+</div>

@@ -1,0 +1,7 @@
+:host {
+  display: block;
+}
+
+router-outlet {
+  padding-top: 60px; /* Adjust this value to match the height of your navbar */
+}
